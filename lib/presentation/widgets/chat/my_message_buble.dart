@@ -11,11 +11,9 @@ class MyMessageBuble extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
-          margin: const EdgeInsets.only(bottom: 10),
           decoration: BoxDecoration(
             color: colors.primary,
-            borderRadius:
-                const BorderRadius.only(bottomLeft: Radius.circular(45)),
+            borderRadius: BorderRadius.circular(20),
           ),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -28,6 +26,7 @@ class MyMessageBuble extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(height: 5)
       ],
     );
   }
