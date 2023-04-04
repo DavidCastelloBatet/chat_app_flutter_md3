@@ -27,7 +27,6 @@ class YourMessageBuble extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5),
-        //Todo: Imagen
         _ImageBuble(),
         const SizedBox(height: 10),
       ],
@@ -47,6 +46,15 @@ class _ImageBuble extends StatelessWidget {
         width: size,
         height: 150,
         fit: BoxFit.cover,
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+          return Container(
+            width: size,
+            height: 150,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: const Text('Cargando meme'),
+          );
+        },
       ),
     );
   }
